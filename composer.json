@@ -1,0 +1,18 @@
+{
+    "name": "yedincisenol/laravel-user-provider",
+    "description": "User provider system for Laravel thirty party auth",
+    "type": "metapackage",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "yedincisenol\\UserProvider\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "yedincisenol\\UserProvider\\UserProviderServiceProvider"
+            ]
+        }
+    }
+}
