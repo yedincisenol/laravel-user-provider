@@ -34,9 +34,9 @@ abstract class UserProviderGrantAbstract extends AbstractGrant
         UserRepositoryInterface $userRepository,
         RefreshTokenRepositoryInterface $refreshTokenRepository
     ) {
-        /* if (!isset($config[$this->getIdentifier()])) {
+        if (!isset($config[$this->getIdentifier()])) {
             throw new ConfigNotFoundException('Config array not found in: userprovider.' . $this->getIdentifier(), 500);
-        } */
+        } 
 
         $this->config = $config[$this->getIdentifier()];
         $this->setUserRepository($userRepository);
