@@ -13,7 +13,6 @@ class UserProviderServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/config/userprovider.php', 'userprovider');
-        $this->loadMigrationsFrom(__DIR__ . '/migrations');
     }
 
     public function boot()
@@ -21,6 +20,7 @@ class UserProviderServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/config/userprovider.php' => config_path('userprovider.php')
         ], 'config');
+        $this->loadMigrationsFrom(__DIR__ . '/migrations');
     }
 
     public function provides()
